@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "name": "All Suppliers Bundle",
+    "stripe": "https://buy.stripe.com/6oU4gta8FdFrbVp0af5os06"
+  },
+  {
+    "id": "accessories",
+    "name": "Accessories Vendor",
+    "stripe": "https://buy.stripe.com/14AdR30y51WJe3x5uz5os07"
+  },
+  {
+    "id": "airbud",
+    "name": "Airbud Vendor",
+    "stripe": "https://buy.stripe.com/fZu28l3Kh1WJ8Jd4qv5os08"
+  },
+  {
+    "id": "cologne",
+    "name": "Cologne Vendor",
+    "stripe": "https://buy.stripe.com/8x27sFdkR1WJ6B58GL5os09"
+  },
+  {
+    "id": "clothing",
+    "name": "Designer Clothing Vendor",
+    "stripe": "https://buy.stripe.com/28EaER0y59pb0cH3mr5os0a"
+  },
+  {
+    "id": "shoe",
+    "name": "Designer Shoe Vendor",
+    "stripe": "https://buy.stripe.com/28E6oB5SpfNz6B54qv5os0b"
+  },
+  {
+    "id": "watch",
+    "name": "Moissanite Watch Vendor",
+    "stripe": "https://buy.stripe.com/28E9AN94BatfcZtaOT5os0c"
+  }
+]

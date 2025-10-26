@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Thanks for your purchase</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>You're in ✅</h1>
+    <p class="lede">Payment received. Click the button below to open your instructions & download page.</p>
+    <p class="notice">If you reached this page without paying, you won’t have support/updates. Please purchase first.</p>
+    <a id="go" class="cta" href="index.html">Go to your download</a>
+    <p style="margin-top:24px"><a href="index.html">Back to Home</a></p>
+  </div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const product = params.get('product');
+
+    fetch('data/products.json').then(r=>r.json()).then(list=>{
+      const match = list.find(p=>p.id === product);
+      if(match){
+        document.getElementById('go').href = match.success;
+        document.getElementById('go').textContent = 'Open ' + match.name;
+      }
+    });
+  </script>
+</body>
+</html>

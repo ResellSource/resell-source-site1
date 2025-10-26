@@ -1,0 +1,44 @@
+[
+  {
+    "id": "all",
+    "name": "All Suppliers Bundle",
+    "stripe": "https://buy.stripe.com/6oU4gta8FdFrbVp0af5os06?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=all",
+    "success": "downloads/all-suppliers.html"
+  },
+  {
+    "id": "accessories",
+    "name": "Accessories Vendor",
+    "stripe": "https://buy.stripe.com/14AdR30y51WJe3x5uz5os07?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=accessories",
+    "success": "downloads/accessories.html"
+  },
+  {
+    "id": "airbud",
+    "name": "Airbud Vendor",
+    "stripe": "https://buy.stripe.com/fZu28l3Kh1WJ8Jd4qv5os08?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=airbud",
+    "success": "downloads/airbud.html"
+  },
+  {
+    "id": "cologne",
+    "name": "Cologne Vendor",
+    "stripe": "https://buy.stripe.com/8x27sFdkR1WJ6B58GL5os09?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=cologne",
+    "success": "downloads/cologne.html"
+  },
+  {
+    "id": "clothing",
+    "name": "Designer Clothing Vendor",
+    "stripe": "https://buy.stripe.com/28EaER0y59pb0cH3mr5os0a?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=clothing",
+    "success": "downloads/clothing.html"
+  },
+  {
+    "id": "shoe",
+    "name": "Designer Shoe Vendor",
+    "stripe": "https://buy.stripe.com/28E6oB5SpfNz6B54qv5os0b?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=shoe",
+    "success": "downloads/shoe.html"
+  },
+  {
+    "id": "watch",
+    "name": "Moissanite Watch Vendor",
+    "stripe": "https://buy.stripe.com/28E9AN94BatfcZtaOT5os0c?success_url=https://resellsource.github.io/resell-source-site1/success.html?product=watch",
+    "success": "downloads/watch.html"
+  }
+]
