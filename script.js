@@ -1,37 +1,39 @@
-[
-  {
-    "id": "all",
-    "name": "All Suppliers Bundle",
-    "stripe": "https://buy.stripe.com/6oU4gta8FdFrbVp0af5os06"
-  },
-  {
-    "id": "accessories",
-    "name": "Accessories Vendor",
-    "stripe": "https://buy.stripe.com/14AdR30y51WJe3x5uz5os07"
-  },
-  {
-    "id": "airbud",
-    "name": "Airbud Vendor",
-    "stripe": "https://buy.stripe.com/fZu28l3Kh1WJ8Jd4qv5os08"
-  },
-  {
-    "id": "cologne",
-    "name": "Cologne Vendor",
-    "stripe": "https://buy.stripe.com/8x27sFdkR1WJ6B58GL5os09"
-  },
-  {
-    "id": "clothing",
-    "name": "Designer Clothing Vendor",
-    "stripe": "https://buy.stripe.com/28EaER0y59pb0cH3mr5os0a"
-  },
-  {
-    "id": "shoe",
-    "name": "Designer Shoe Vendor",
-    "stripe": "https://buy.stripe.com/28E6oB5SpfNz6B54qv5os0b"
-  },
-  {
-    "id": "watch",
-    "name": "Moissanite Watch Vendor",
-    "stripe": "https://buy.stripe.com/28E9AN94BatfcZtaOT5os0c"
+// === Resell Source | Stripe Buy Now Button Script ===
+
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("✅ Resell Source script loaded.");
+
+  try {
+    const response = await fetch("data/products.json");
+    if (!response.ok) throw new Error(`Could not load products.json: ${response.status}`);
+
+    const products = await response.json();
+    console.log("✅ Products loaded successfully:", products);
+
+    const buttons = document.querySelectorAll("[data-product]");
+    if (buttons.length === 0) {
+      console.warn("⚠️ No Buy Now buttons found on this page.");
+      return;
+    }
+
+    buttons.forEach((button) => {
+      const id = button.getAttribute("data-product");
+      const product = products.find((p) => p.id === id);
+
+      if (product && product.stripe) {
+        button.addEventListener("click", () => {
+          console.log(`🛒 Opening Stripe checkout for: ${product.name}`);
+          window.open(product.stripe, "_blank", "noopener");
+        });
+      } else {
+        console.warn(`⚠️ Stripe link missing for product ID: ${id}`);
+        button.addEventListener("click", () => {
+          alert("Sorry, this product is not available right now.");
+        });
+      }
+    });
+  } catch (err) {
+    console.error("❌ Error initializing Buy Now buttons:", err);
   }
-]
+});
+
